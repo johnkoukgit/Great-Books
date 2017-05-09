@@ -1,5 +1,5 @@
 (function () {
-    var app;
+    app = new kendo.mobile.Application(document.body, { layout: "main-layout" , transition: "zoom"});
 
     window.Books = {
         data: new kendo.data.DataSource({
@@ -15,8 +15,10 @@
         }
     }),
         back: function() {
+            app.navigate("#:back");
         },
         settings: function() {
+            app.navigate("views/settings.html");
         }
     };
 
